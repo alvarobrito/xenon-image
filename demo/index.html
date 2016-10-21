@@ -1,0 +1,39 @@
+<!doctype html>
+<html>
+  <head>
+    <title>xenon-image demo</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, initial-scale=1, user-scalable=yes">
+    <script src="../../webcomponentsjs/webcomponents-lite.js"></script>
+
+    <link rel="import" href="../../iron-demo-helpers/demo-pages-shared-styles.html">
+    <link rel="import" href="../../iron-demo-helpers/demo-snippet.html">
+
+    <link rel="import" href="../xenon-image.html">
+
+    <style is="custom-style" include="demo-pages-shared-styles">
+      /* Mobile first styles */
+      [xenon-element=my-responsive-image] {
+        --xenon-image-width: 360px;
+        --xenon-image-height: 120px;
+      }
+      [xenon-element=my-responsive-image] {
+        --xenon-image: {
+          background-image: url(http://lorempixel.com/360/120);
+        }
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="vertical-section-container centered">
+      <h3>Basic xenon-image Demo</h3>
+      <demo-snippet>
+        <template>
+           <xenon-image xenon-element="my-responsive-image" sizing="cover" position="center" src='[{"url": "http://lorempixel.com/800/600", "mq": "(min-width:420px)"}, {"url": "http://lorempixel.com/1024/768", "mq": "(min-width:1024px)" }]'></xenon-image>
+        </template>
+      </demo-snippet>
+    </div>
+
+  </body>
+</html>
